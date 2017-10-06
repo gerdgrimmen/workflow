@@ -4,11 +4,12 @@
 test() ->
     error.
 % Data
--record(name,{field1,field2}).
+%-record(name,{field1,field2}).
 % Conditions
 condition() ->
     ok.
 % Actions
+
 action(set, Field, Value) ->
     ok;
 action(delete, Field,Value) ->
