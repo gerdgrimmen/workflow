@@ -9,7 +9,7 @@ test() ->
 condition() ->
     ok.
 
-%Mapstuff
+%Mapstuff - 
 %maps:get(Variable, M1).
 %maps:get(Variable, M1, Default).
 %maps:is_key(Key, Map). -> true || false
@@ -19,13 +19,14 @@ condition() ->
 
 %prolist -> configs
 
+
 % concitions meet actions ?!
 condition(equals, Value1, Value2, Action) ->
     Value1 = Value2;
 condition(lessthan, Value1, Value2, Action) ->
     Value1 < Value2;
 condition(greaterthan, Value1, Value2, Action) ->
-condition(lessthan, Value2, Value1, Action);
+    condition(lessthan, Value2, Value1, Action).
 
 % Actions
 
