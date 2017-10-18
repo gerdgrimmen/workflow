@@ -19,6 +19,14 @@ condition() ->
 
 %prolist -> configs
 
+% concitions meet actions ?!
+condition(equals, Value1, Value2, Action) ->
+    Value1 = Value2;
+condition(lessthan, Value1, Value2, Action) ->
+    Value1 < Value2;
+condition(greaterthan, Value1, Value2, Action) ->
+condition(lessthan, Value2, Value1, Action);
+
 % Actions
 
 action(set, Field, Value) ->
